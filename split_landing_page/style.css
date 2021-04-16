@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+:root {
+  --left-bg-color: rgba(189, 188, 202, 0.3);
+  --right-bg-color: rgba(187, 168, 127, 0.3);
+  --hover-width: 70vw;
+  --other-width: 30vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.split.left .btn {
+  border: #000 solid 0.2rem;
+  color: #000;
+}
+
+.split.left .btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.split.right .btn {
+  border: #fff solid 0.2rem;
+  color: #fff;
+}
+
+.split.right .btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.split {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /*position: absolute;*/
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+}
+
+.split a {
+  text-decoration: none;
+}
+
+.split.left {
+  color: black;
+  background: url("./airpods.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50vw;
+}
+
+.split.right {
+  color: white;
+  background: url("./macbook.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50vw;
+}
+
+.split.left,
+.split.right {
+  transition: all 1000ms ease-in-out;
+}
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-rigth .left {
+  width: var(--other-width);
+}
+
+.hover-right .right {
+  width: var(--hover-width);
+}
